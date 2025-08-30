@@ -1,27 +1,3 @@
-# In cryprography, a Caesar cipher is a type
-# of substitution cipher in which each letter
-# in the text is replaced by a letter some
-# fixed number of positions down the alphabet.
-# Named after Julius Caesar, who used it in
-# his private correspondence.
-
-# Example:
-# Left shift of 3, D would be replaced by A,
-# E would become B, and so on.
-
-# The method uses a right shift
-# Should wrap from z to a
-# Should maintain the same case
-# Symbols not on the alphabet remain unchanged
-
-# Formula
-# Gets the ASCII/UTF-8 inte representation of the char
-# normalizes it to a alphabetical 0..25
-# Adds the shift expected
-# Gets the module of it by diving with the total
-# number of letter in the alphabet
-# Finally denormalizes it by adding its base 
-
 module CaesarCipher
   ALPHABET_SIZE = 26
   MAX_UNICODE = 0x10FFFF
@@ -80,17 +56,8 @@ module CaesarCipher
     byte_array.pack("C*")
   end 
 end
-
-# Sambple usage
-cipher = CaesarCipher.cipher_ascii("What a string!", 5)
-puts cipher
-puts CaesarCipher.decipher_ascii(cipher, 5)
-
-puts "Cipher UTF8 ----"
-
 cipherUTF8 = CaesarCipher.cipher_unicode("What a string!", 200)
 puts cipherUTF8
 puts CaesarCipher.decipher_unicode(cipherUTF8, 200)
 
-puts "Brute Force Decipher ASCII:"
-CaesarCipher.brute_force_decipher_ascii(cipher)
+
