@@ -4,6 +4,7 @@ In cryprography, a Caesar cipher is a type of substitution cipher in which each 
 
 # Example:
 Left shift of 3, D would be replaced by A, E would become B, and so on.
+Run `ruby example_usage.rb` to see the module on action
 
 The module uses a right shift
 # ASCII
