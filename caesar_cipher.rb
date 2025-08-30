@@ -56,8 +56,3 @@ module CaesarCipher
     byte_array.pack("C*")
   end 
 end
-cipherUTF8 = CaesarCipher.cipher_unicode("What a string!", 200)
-puts cipherUTF8
-puts CaesarCipher.decipher_unicode(cipherUTF8, 200)
-
-
